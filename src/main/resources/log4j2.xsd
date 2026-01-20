@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="configuration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="appenders">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="console">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="patternlayout">
+											<xs:complexType>
+												<xs:attribute name="pattern" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" use="required" />
+									<xs:attribute name="target" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="file" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="filters">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="thresholdfilter">
+														<xs:complexType>
+															<xs:attribute name="level" use="required" />
+															<xs:attribute name="onMatch" use="required" />
+															<xs:attribute name="onMismatch" use="required" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="patternlayout">
+											<xs:complexType>
+												<xs:attribute name="pattern" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" use="required" />
+									<xs:attribute name="filename" use="required" />
+									<xs:attribute name="append" type="xs:boolean" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="loggers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="logger">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="appenderref" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="ref" use="required" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" use="required" />
+									<xs:attribute name="level" use="required" />
+									<xs:attribute name="additivity" type="xs:boolean" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="status" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
