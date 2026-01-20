@@ -7,6 +7,7 @@ import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -22,7 +23,8 @@ public class ExtentManager {
 
 	private static ExtentReports extent;
 	private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
-	private static Map<Long, WebDriver> driverMap = new HashMap<>();
+	private static Map<Long, WebDriver> driverMap = new ConcurrentHashMap<>();
+
 
 	// Initialize the Extent Report
 	public static ExtentReports getReporter() {
@@ -55,6 +57,7 @@ public class ExtentManager {
 	// End a Test
 	public synchronized static void endTest() {
 		getReporter().flush();
+		 test.remove();
 	}
 
 	// Get Current Thread's test
@@ -71,17 +74,22 @@ public class ExtentManager {
 			return "No test is currently active for this thread";
 		}
 	}
+	
 
 	// Log a step
 	public static void logStep(String logMessage) {
-		getTest().info(logMessage);
+		if (getTest() != null) {
+			getTest().info(logMessage);
+		}
 	}
 
 	// Log a step validation with screenshot
 	public static void logStepWithScreenshot(WebDriver driver, String logMessage, String screenShotMessage) {
-		getTest().pass(logMessage);
-		// Screenshot method
-		attachScreenshot(driver, screenShotMessage);
+		if (getTest() != null) {
+			getTest().pass(logMessage);
+			// Screenshot method
+			attachScreenshot(driver, screenShotMessage);
+		}
 
 	}
 
@@ -92,10 +100,12 @@ public class ExtentManager {
 
 	// Log a Failure
 	public static void logFailure(WebDriver driver, String logMessage, String screenShotMessage) {
-		String colorMessage = String.format("<span style='color:red;'>%s</span>", logMessage);
-		getTest().fail(colorMessage);
-		// Screenshot method
-		attachScreenshot(driver, screenShotMessage);
+		 if (getTest() != null) {
+		        String colorMessage = String.format("<span style='color:red;'>%s</span>", logMessage);
+		        getTest().fail(colorMessage);
+		     // Screenshot method
+		        attachScreenshot(driver, screenShotMessage);
+		    }
 	}
 
 	// Log a Failure for API
@@ -106,8 +116,10 @@ public class ExtentManager {
 
 	// Log a skip
 	public static void logSkip(String logMessage) {
-		String colorMessage = String.format("<span style='color:orange;'>%s</span>", logMessage);
-		getTest().skip(colorMessage);
+		 if (getTest() != null) {
+		        String colorMessage = String.format("<span style='color:orange;'>%s</span>", logMessage);
+		        getTest().skip(colorMessage);
+		    }
 	}
 
 	// Take a screenshot with date and time in the file

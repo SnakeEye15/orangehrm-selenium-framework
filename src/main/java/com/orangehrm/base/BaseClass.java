@@ -37,9 +37,9 @@ public class BaseClass {
 		FileInputStream fis = new FileInputStream("src/main/resources/config.properties");
 		prop.load(fis);
 		logger.info("Config.properties files loaded");
-		
-		//Start the Extent Report
-		//ExtentManager.getReporter(); -- This has been implemented in TestListener
+
+		// Start the Extent Report
+		// ExtentManager.getReporter(); -- This has been implemented in TestListener
 	}
 
 	private synchronized void launchBrowser() {
@@ -85,7 +85,7 @@ public class BaseClass {
 		}
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public synchronized void setup() throws IOException {
 		System.out.println("Setting up WebDriver for:" + this.getClass().getSimpleName());
 		launchBrowser();
@@ -112,7 +112,7 @@ public class BaseClass {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public synchronized void tearDown() {
 		if (getDriver() != null) { // New Changes as per Thread
 			try {
@@ -126,30 +126,35 @@ public class BaseClass {
 		actionDriver.remove(); // New Changes as per Thread
 		// driver = null;
 		// actionDriver = null;
-		//ExtentManager.endTest(); -- This is implemented in TestListener
+		// ExtentManager.endTest(); -- This is implemented in TestListener
 	}
 
 	/**
 	 * //Driver Getter method public WebDriver getDriver() { return driver; }
 	 **/
+	/**
+	 * // Getter Method for WebDriver public static WebDriver getDriver() {
+	 * 
+	 * if (driver.get() == null) { // New Changes as per Thread
+	 * System.out.println("WebDriver instance is null"); throw new
+	 * IllegalStateException("WebDriver instance is null"); } return driver.get(); }
+	 * 
+	 * // Getter Method for Action Driver public static ActionDriver
+	 * getActionDriver() {
+	 * 
+	 * if (actionDriver.get() == null) { // New Changes as per Thread
+	 * System.out.println("actionDriver instance is null"); throw new
+	 * IllegalStateException("actionDriver instance is null"); } return
+	 * actionDriver.get(); }
+	 **/
 
 	// Getter Method for WebDriver
 	public static WebDriver getDriver() {
-
-		if (driver.get() == null) { // New Changes as per Thread
-			System.out.println("WebDriver instance is null");
-			throw new IllegalStateException("WebDriver instance is null");
-		}
-		return driver.get();
+		return driver.get(); // return null if not initialized
 	}
 
 	// Getter Method for Action Driver
 	public static ActionDriver getActionDriver() {
-
-		if (actionDriver.get() == null) { // New Changes as per Thread
-			System.out.println("actionDriver instance is null");
-			throw new IllegalStateException("actionDriver instance is null");
-		}
 		return actionDriver.get();
 	}
 

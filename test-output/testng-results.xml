@@ -2,20 +2,32 @@
 <testng-results ignored="0" total="5" passed="3" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-19T22:17:44 IST" name="OrangeHRMSuite" finished-at="2026-01-19T22:18:55 IST" duration-ms="70867">
+  <suite started-at="2026-01-20T22:28:50 IST" name="OrangeHRMSuite" finished-at="2026-01-20T22:30:09 IST" duration-ms="79299">
     <groups>
     </groups>
-    <test started-at="2026-01-19T22:17:44 IST" name="OrangeHRMTest" finished-at="2026-01-19T22:18:55 IST" duration-ms="70867">
+    <test started-at="2026-01-20T22:28:50 IST" name="OrangeHRMTest" finished-at="2026-01-20T22:30:09 IST" duration-ms="79299">
       <class name="com.orangehrm.tests.LoginPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.LoginPageTest@22f31dec]" started-at="2026-01-19T22:17:44 IST" name="setup" finished-at="2026-01-19T22:18:04 IST" duration-ms="19473" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.LoginPageTest@2bd08376]" started-at="2026-01-20T22:28:52 IST" name="setup" finished-at="2026-01-20T22:29:08 IST" duration-ms="15399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.tests.LoginPageTest@22f31dec]" started-at="2026-01-19T22:18:04 IST" name="setupPages" finished-at="2026-01-19T22:18:04 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.tests.LoginPageTest@2bd08376]" started-at="2026-01-20T22:29:08 IST" name="setupPages" finished-at="2026-01-20T22:29:08 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPages -->
-        <test-method signature="invalidLoginTest()[pri:0, instance:com.orangehrm.tests.LoginPageTest@22f31dec]" started-at="2026-01-19T22:18:04 IST" name="invalidLoginTest" finished-at="2026-01-19T22:18:09 IST" duration-ms="5000" status="FAIL">
+        <test-method signature="invalidLoginTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.tests.LoginPageTest@2bd08376]" started-at="2026-01-20T22:29:08 IST" name="invalidLoginTest" data-provider="inValidLoginData" finished-at="2026-01-20T22:29:20 IST" duration-ms="12444" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Test Failed: Invalid Error Message expected [true] but found [false]]]>
@@ -25,7 +37,7 @@
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertTrue(Assert.java:57)
-at com.orangehrm.tests.LoginPageTest.invalidLoginTest(LoginPageTest.java:42)
+at com.orangehrm.tests.LoginPageTest.invalidLoginTest(LoginPageTest.java:46)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -50,37 +62,49 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.LoginPageTest@22f31dec]" started-at="2026-01-19T22:18:09 IST" name="tearDown" finished-at="2026-01-19T22:18:11 IST" duration-ms="2047" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.LoginPageTest@2bd08376]" started-at="2026-01-20T22:29:21 IST" name="tearDown" finished-at="2026-01-20T22:29:21 IST" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.LoginPageTest@22f31dec]" started-at="2026-01-19T22:18:11 IST" name="setup" finished-at="2026-01-19T22:18:35 IST" duration-ms="24553" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.LoginPageTest@2bd08376]" started-at="2026-01-20T22:29:21 IST" name="setup" finished-at="2026-01-20T22:29:38 IST" duration-ms="16568" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.tests.LoginPageTest@22f31dec]" started-at="2026-01-19T22:18:35 IST" name="setupPages" finished-at="2026-01-19T22:18:35 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.tests.LoginPageTest@2bd08376]" started-at="2026-01-20T22:29:38 IST" name="setupPages" finished-at="2026-01-20T22:29:38 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPages -->
-        <test-method signature="verifyValidLoginTest()[pri:0, instance:com.orangehrm.tests.LoginPageTest@22f31dec]" started-at="2026-01-19T22:18:35 IST" name="verifyValidLoginTest" finished-at="2026-01-19T22:18:54 IST" duration-ms="18456" status="PASS">
+        <test-method signature="verifyValidLoginTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.tests.LoginPageTest@2bd08376]" started-at="2026-01-20T22:29:38 IST" name="verifyValidLoginTest" data-provider="validLoginData" finished-at="2026-01-20T22:30:09 IST" duration-ms="30939" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.LoginPageTest@22f31dec]" started-at="2026-01-19T22:18:54 IST" name="tearDown" finished-at="2026-01-19T22:18:55 IST" duration-ms="447" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.LoginPageTest@2bd08376]" started-at="2026-01-20T22:30:09 IST" name="tearDown" finished-at="2026-01-20T22:30:09 IST" duration-ms="410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.orangehrm.tests.LoginPageTest -->
       <class name="com.orangehrm.tests.DummyClass">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.orangehrm.tests.DummyClass@484094a5]" started-at="2026-01-19T22:17:44 IST" name="loadConfig" finished-at="2026-01-19T22:17:44 IST" duration-ms="41" status="PASS">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.orangehrm.tests.DummyClass@45312be2]" started-at="2026-01-20T22:28:50 IST" name="loadConfig" finished-at="2026-01-20T22:28:50 IST" duration-ms="46" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.DummyClass@484094a5]" started-at="2026-01-19T22:17:44 IST" name="setup" finished-at="2026-01-19T22:17:57 IST" duration-ms="12481" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.DummyClass@45312be2]" started-at="2026-01-20T22:28:50 IST" name="setup" finished-at="2026-01-20T22:29:12 IST" duration-ms="21777" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="dummyTest()[pri:0, instance:com.orangehrm.tests.DummyClass@484094a5]" started-at="2026-01-19T22:17:57 IST" name="dummyTest" finished-at="2026-01-19T22:17:57 IST" duration-ms="60" status="SKIP">
+        <test-method signature="dummyTest()[pri:0, instance:com.orangehrm.tests.DummyClass@45312be2]" started-at="2026-01-20T22:29:12 IST" name="dummyTest" finished-at="2026-01-20T22:29:12 IST" duration-ms="28" status="SKIP">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping the Test as per part of testing]]>
@@ -112,39 +136,51 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dummyTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.DummyClass@484094a5]" started-at="2026-01-19T22:17:57 IST" name="tearDown" finished-at="2026-01-19T22:17:57 IST" duration-ms="427" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.DummyClass@45312be2]" started-at="2026-01-20T22:29:12 IST" name="tearDown" finished-at="2026-01-20T22:29:13 IST" duration-ms="424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.orangehrm.tests.DummyClass -->
       <class name="com.orangehrm.tests.HomePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.HomePageTest@64c63c79]" started-at="2026-01-19T22:17:44 IST" name="setup" finished-at="2026-01-19T22:17:58 IST" duration-ms="13635" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.HomePageTest@5812f68b]" started-at="2026-01-20T22:28:52 IST" name="setup" finished-at="2026-01-20T22:29:06 IST" duration-ms="13468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.tests.HomePageTest@64c63c79]" started-at="2026-01-19T22:17:58 IST" name="setupPages" finished-at="2026-01-19T22:17:58 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.tests.HomePageTest@5812f68b]" started-at="2026-01-20T22:29:06 IST" name="setupPages" finished-at="2026-01-20T22:29:06 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPages -->
-        <test-method signature="verifyOrangeHRMLogo()[pri:0, instance:com.orangehrm.tests.HomePageTest@64c63c79]" started-at="2026-01-19T22:17:58 IST" name="verifyOrangeHRMLogo" finished-at="2026-01-19T22:18:05 IST" duration-ms="6772" status="PASS">
+        <test-method signature="verifyOrangeHRMLogo(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.tests.HomePageTest@5812f68b]" started-at="2026-01-20T22:29:06 IST" name="verifyOrangeHRMLogo" data-provider="validLoginData" finished-at="2026-01-20T22:29:18 IST" duration-ms="12066" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOrangeHRMLogo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.HomePageTest@64c63c79]" started-at="2026-01-19T22:18:05 IST" name="tearDown" finished-at="2026-01-19T22:18:06 IST" duration-ms="585" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.HomePageTest@5812f68b]" started-at="2026-01-20T22:29:18 IST" name="tearDown" finished-at="2026-01-20T22:29:18 IST" duration-ms="383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.orangehrm.tests.HomePageTest -->
       <class name="com.orangehrm.tests.DummyClass2">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.DummyClass2@32c726ee]" started-at="2026-01-19T22:17:44 IST" name="setup" finished-at="2026-01-19T22:17:58 IST" duration-ms="13562" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.DummyClass2@50d13246]" started-at="2026-01-20T22:28:50 IST" name="setup" finished-at="2026-01-20T22:29:05 IST" duration-ms="14318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="dummyTest2()[pri:0, instance:com.orangehrm.tests.DummyClass2@32c726ee]" started-at="2026-01-19T22:17:58 IST" name="dummyTest2" finished-at="2026-01-19T22:17:58 IST" duration-ms="33" status="PASS">
+        <test-method signature="dummyTest2()[pri:0, instance:com.orangehrm.tests.DummyClass2@50d13246]" started-at="2026-01-20T22:29:05 IST" name="dummyTest2" finished-at="2026-01-20T22:29:05 IST" duration-ms="70" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dummyTest2 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.DummyClass2@32c726ee]" started-at="2026-01-19T22:17:58 IST" name="tearDown" finished-at="2026-01-19T22:17:59 IST" duration-ms="481" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.DummyClass2@50d13246]" started-at="2026-01-20T22:29:05 IST" name="tearDown" finished-at="2026-01-20T22:29:05 IST" duration-ms="443" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

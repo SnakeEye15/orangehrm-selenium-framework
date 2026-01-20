@@ -11,12 +11,12 @@ public class DataProviders {
 	
 	@DataProvider(name="validLoginData")
 	public static Object[][] validLoginData() {
-		return getSheetData("Valid");
+		return getSheetData("VALID");
 	}
 	
 	@DataProvider(name="inValidLoginData")
 	public static Object[][] inValidLoginData() {
-		return getSheetData("Invalid");
+		return getSheetData("INVALID");
 	}
 
 	private static Object[][] getSheetData(String sheetName) {
