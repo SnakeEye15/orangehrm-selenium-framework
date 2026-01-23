@@ -8,15 +8,20 @@ public class DataProviders {
 
 	private static final String FILE_PATH = System.getProperty("user.dir")
 			+ "/src/test/resources/testdata/TestData.xlsx";
-	
-	@DataProvider(name="validLoginData")
+
+	@DataProvider(name = "validLoginData")
 	public static Object[][] validLoginData() {
 		return getSheetData("VALID");
 	}
-	
-	@DataProvider(name="inValidLoginData")
+
+	@DataProvider(name = "inValidLoginData")
 	public static Object[][] inValidLoginData() {
 		return getSheetData("INVALID");
+	}
+
+	@DataProvider(name = "employeeDeails")
+	public static Object[][] EmployeeDetails() {
+		return getSheetData("EmployeeDetails");
 	}
 
 	private static Object[][] getSheetData(String sheetName) {

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>OrangeHRMTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 20 22:28:50 IST 2026</td>
+<td>Started on:</td><td>Fri Jan 23 20:47:15 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>79 seconds (79299 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (167 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,95 +76,23 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.orangehrm.tests.LoginPageTest.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: com.orangehrm.tests.LoginPageTest<br>Parameters: Admin, admin</td>
-<td><div><pre>java.lang.AssertionError: Test Failed: Invalid Error Message expected [true] but found [false]
-	at com.orangehrm.tests.LoginPageTest.invalidLoginTest(LoginPageTest.java:46)
+<td title='com.orangehrm.tests.DBVerificationTest.EmployeeNameVerificationTest()'><b>EmployeeNameVerificationTest</b><br>Test class: com.orangehrm.tests.DBVerificationTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Method public void com.orangehrm.tests.DBVerificationTest.EmployeeNameVerificationTest(java.lang.String,java.lang.String) requires a @DataProvider named : EmployeeDetails in class com.orangehrm.utilities.DataProviders
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace530390487", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace530390487'><pre>java.lang.AssertionError: Test Failed: Invalid Error Message expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.orangehrm.tests.LoginPageTest.invalidLoginTest(LoginPageTest.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-</pre></div></td>
-<td>12</td>
-<td>com.orangehrm.tests.LoginPageTest@2bd08376</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.orangehrm.tests.DummyClass2.dummyTest2()'><b>dummyTest2</b><br>Test class: com.orangehrm.tests.DummyClass2</td>
-<td></td>
-<td>0</td>
-<td>com.orangehrm.tests.DummyClass2@50d13246</td></tr>
-<tr>
-<td title='com.orangehrm.tests.HomePageTest.verifyOrangeHRMLogo()'><b>verifyOrangeHRMLogo</b><br>Test class: com.orangehrm.tests.HomePageTest<br>Parameters: Admin, admin123</td>
-<td></td>
-<td>12</td>
-<td>com.orangehrm.tests.HomePageTest@5812f68b</td></tr>
-<tr>
-<td title='com.orangehrm.tests.LoginPageTest.verifyValidLoginTest()'><b>verifyValidLoginTest</b><br>Test class: com.orangehrm.tests.LoginPageTest<br>Parameters: Admin, admin123</td>
-<td></td>
-<td>30</td>
-<td>com.orangehrm.tests.LoginPageTest@2bd08376</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.orangehrm.tests.DummyClass.dummyTest()'><b>dummyTest</b><br>Test class: com.orangehrm.tests.DummyClass</td>
-<td><div><pre>org.testng.SkipException: Skipping the Test as per part of testing
-	at com.orangehrm.tests.DummyClass.dummyTest(DummyClass.java:20)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1440628112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1440628112'><pre>org.testng.SkipException: Skipping the Test as per part of testing
-	at com.orangehrm.tests.DummyClass.dummyTest(DummyClass.java:20)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2080366727", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2080366727'><pre>org.testng.TestNGException: 
+Method public void com.orangehrm.tests.DBVerificationTest.EmployeeNameVerificationTest(java.lang.String,java.lang.String) requires a @DataProvider named : EmployeeDetails in class com.orangehrm.utilities.DataProviders
+	at org.testng.internal.Parameters.findDataProvider(Parameters.java:532)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -176,7 +104,7 @@ function toggleAllBoxes() {
 	at java.base/java.lang.Thread.run(Thread.java:840)
 </pre></div></td>
 <td>0</td>
-<td>com.orangehrm.tests.DummyClass@45312be2</td></tr>
+<td>com.orangehrm.tests.DBVerificationTest@77102b91</td></tr>
 </table><p>
 </body>
 </html>
