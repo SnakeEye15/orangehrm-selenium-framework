@@ -11,7 +11,7 @@
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="setupPages"/>
-          <include name="EmployeeNameVerificationTest" invocation-numbers="0 2"/>
+          <include name="EmployeeNameVerificationTest" invocation-numbers="0"/>
           <include name="loadConfig"/>
         </methods>
       </class> <!-- com.orangehrm.tests.DBVerificationTest -->

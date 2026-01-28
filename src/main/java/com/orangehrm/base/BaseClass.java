@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
 import com.orangehrm.actiondriver.ActionDriver;
 import com.orangehrm.utilities.ExtentManager;
@@ -27,6 +28,14 @@ public class BaseClass {
 	// Creating Thread local variables for WebDriver and ActionDriver
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	private static ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
+
+	// SoftAssert with ThreadLocal for Thread safety
+	protected ThreadLocal<SoftAssert> softAssert = ThreadLocal.withInitial(SoftAssert::new);
+
+	// getter method for softAssert
+	public SoftAssert getSoftAssert() {
+		return softAssert.get();
+	}
 
 	public static final Logger logger = LoggerManager.getLogger(BaseClass.class);
 
