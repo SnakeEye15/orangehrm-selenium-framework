@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-23T20:47:15 IST" name="OrangeHRMSuite" finished-at="2026-01-23T20:47:15 IST" duration-ms="167">
+  <suite started-at="2026-01-28T19:33:30 IST" name="OrangeHRMSuite" finished-at="2026-01-28T19:34:03 IST" duration-ms="32276">
     <groups>
     </groups>
-    <test started-at="2026-01-23T20:47:15 IST" name="OrangeHRMTest" finished-at="2026-01-23T20:47:15 IST" duration-ms="167">
+    <test started-at="2026-01-28T19:33:30 IST" name="OrangeHRMTest" finished-at="2026-01-28T19:34:03 IST" duration-ms="32276">
       <class name="com.orangehrm.tests.DBVerificationTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-23T20:47:15 IST" name="loadConfig" finished-at="2026-01-23T20:47:15 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:30 IST" name="loadConfig" finished-at="2026-01-28T19:33:30 IST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method signature="EmployeeNameVerificationTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-23T20:47:15 IST" name="EmployeeNameVerificationTest" finished-at="2026-01-23T20:47:15 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:31 IST" name="setup" finished-at="2026-01-28T19:33:35 IST" duration-ms="3769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:35 IST" name="setupPages" finished-at="2026-01-28T19:33:35 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPages -->
+        <test-method signature="EmployeeNameVerificationTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:35 IST" name="EmployeeNameVerificationTest" data-provider="employeeDeails" finished-at="2026-01-28T19:33:42 IST" duration-ms="6855" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dheeraj]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[
-Method public void com.orangehrm.tests.DBVerificationTest.EmployeeNameVerificationTest(java.lang.String,java.lang.String) requires a @DataProvider named : EmployeeDetails in class com.orangehrm.utilities.DataProviders]]>
+              <![CDATA[Employee first and last name are not matching  expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method public void com.orangehrm.tests.DBVerificationTest.EmployeeNameVerificationTest(java.lang.String,java.lang.String) requires a @DataProvider named : EmployeeDetails in class com.orangehrm.utilities.DataProviders
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:532)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+              <![CDATA[java.lang.AssertionError: Employee first and last name are not matching  expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.orangehrm.tests.DBVerificationTest.EmployeeNameVerificationTest(DBVerificationTest.java:51)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -37,10 +62,101 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:840)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmployeeNameVerificationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:42 IST" name="tearDown" finished-at="2026-01-28T19:33:42 IST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:42 IST" name="setup" finished-at="2026-01-28T19:33:45 IST" duration-ms="3426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:45 IST" name="setupPages" finished-at="2026-01-28T19:33:45 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPages -->
+        <test-method signature="EmployeeNameVerificationTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:45 IST" name="EmployeeNameVerificationTest" data-provider="employeeDeails" finished-at="2026-01-28T19:33:52 IST" duration-ms="6278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ajay]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmployeeNameVerificationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:52 IST" name="tearDown" finished-at="2026-01-28T19:33:52 IST" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:52 IST" name="setup" finished-at="2026-01-28T19:33:55 IST" duration-ms="3429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:55 IST" name="setupPages" finished-at="2026-01-28T19:33:55 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPages -->
+        <test-method signature="EmployeeNameVerificationTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:33:55 IST" name="EmployeeNameVerificationTest" data-provider="employeeDeails" finished-at="2026-01-28T19:34:02 IST" duration-ms="6893" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ravi]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Employee first and last name are not matching  expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Employee first and last name are not matching  expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.orangehrm.tests.DBVerificationTest.EmployeeNameVerificationTest(DBVerificationTest.java:51)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmployeeNameVerificationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.tests.DBVerificationTest@77102b91]" started-at="2026-01-28T19:34:02 IST" name="tearDown" finished-at="2026-01-28T19:34:03 IST" duration-ms="291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.orangehrm.tests.DBVerificationTest -->
     </test> <!-- OrangeHRMTest -->
   </suite> <!-- OrangeHRMSuite -->

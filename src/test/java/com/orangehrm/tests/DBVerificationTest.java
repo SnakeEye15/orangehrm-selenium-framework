@@ -24,7 +24,7 @@ public class DBVerificationTest extends BaseClass {
 		homepage = new HomePage(getDriver());
 	}
 
-	@Test(dataProvider = "EmployeeDetails", dataProviderClass = DataProviders.class)
+	@Test(dataProvider = "employeeDeails", dataProviderClass = DataProviders.class)
 	public void EmployeeNameVerificationTest(String empID, String empName) {
 		ExtentManager.logStep("Logging with Admin ");
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));

@@ -60,12 +60,12 @@ public class HomePage {
 		return actionDriver.compareText(empFirstAndMiddleName, firstAndMiddleNameFromDB);
 
 	}
-	
-	// Verify employee first and middle name
-		public boolean verifyEmployeeLastName(String empLastNameFromDB) {
-			return actionDriver.compareText(empLastName, empLastNameFromDB);
 
-		}
+	// Verify employee Last name
+	public boolean verifyEmployeeLastName(String empLastNameFromDB) {
+		return actionDriver.compareText(empLastName, empLastNameFromDB);
+
+	}
 
 	// Method to perform Logout Operations
 	public void logout() {
